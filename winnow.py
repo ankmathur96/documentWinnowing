@@ -34,7 +34,7 @@ def winnow(k_grams, k, t):
 	# as a fingerprint.
 	w_start, w_end = 0, window_size
 	cur_min = None
-	while w_end < len(hashes):
+	while w_end <= len(hashes):           #it should be <= then only it will reach last hash
 		window = hashes[w_start:w_end]
 		new_min = min(window)
 		if cur_min != new_min:
